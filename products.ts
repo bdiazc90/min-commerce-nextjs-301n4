@@ -26,5 +26,13 @@ export const products: Product[] = [
     category: 'Ropa',
     onSale: false
   },
+  {
+    id: 4,
+    name: 'Gorro Puma',
+    price: 29.99,
+    imageUrl: 'https://placehold.co/300',
+    category: 'Accesorios',
+    onSale: false
+  },
   // ...otros productos
 ];
