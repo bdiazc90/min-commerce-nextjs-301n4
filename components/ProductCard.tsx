@@ -1,8 +1,10 @@
 "use client";
 import Link from 'next/link';
 import type { Product } from "@/types";
-import { useContext } from "react";
-import { CartContext } from "@/contexts/CartContext";
+// import { useContext } from "react";
+// import { CartContext } from "@/contexts/CartContext";
+
+import { useCartStore } from '@/lib/store/cart-store';
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
@@ -10,12 +12,14 @@ import { Badge } from './ui/badge';
 import { cn } from '@/lib/utils';
 
 export function ProductCard(product: Product) {
-  const cartContext = useContext(CartContext);
-  if (cartContext === undefined) {
-    throw new Error("No hay contexto");
-  }
+  // const cartContext = useContext(CartContext);
+  // if (cartContext === undefined) {
+  //   throw new Error("No hay contexto");
+  // }
 
-  const { addToCart } = cartContext;
+  // const { addToCart } = cartContext;
+
+  const { addItem: addToCart } = useCartStore();
 
   function handleAddButton(product: Product) {
     addToCart(product);
