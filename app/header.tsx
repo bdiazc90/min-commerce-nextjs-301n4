@@ -1,8 +1,10 @@
 import Link from "next/link"
+import AuthButton from "@/components/AuthButton"
 
 export function Header() {
     const navigationLinks = [
         { path: "/", label: "Home" },
+        { path: "/profile", label: "Perfil" },
         // { path: "/about", label: "Nosotros" },
         // { path: "/contact", label: "Contacto" },
         { path: "/cart", label: "Carrito" },
@@ -22,6 +24,7 @@ export function Header() {
                         </li>
                     )}
                 </ul>
+                <AuthButton />
             </nav>
         </header>
     )
