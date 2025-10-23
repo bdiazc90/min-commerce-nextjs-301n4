@@ -12,9 +12,10 @@ export default async function ProfilePage() {
     }
 
     return (
-        <section className="h-[80vh] flex flex-col items-center justify-center">
+        <section className="h-[80vh] flex flex-col items-center justify-center text-green-600">
             <h2 className="text-xl">Perfil del Usuario</h2>
             <p className="font-bold">{session.user?.name} / {session.user?.email}</p>
+            <p className="font-bold">{session.user?.role}</p>
         </section>
     )
 }
